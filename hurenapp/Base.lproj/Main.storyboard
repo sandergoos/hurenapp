@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Huizen-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="WoningenViewController" customModule="hurenapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TcV-3Y-oLI">
+                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WoningTableViewCell" rowHeight="100" id="7fy-2o-Q1i" customClass="WoningTableViewCell" customModule="hurenapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fy-2o-Q1i" id="LsG-iG-ZZh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGr-re-mts">
+                                                    <rect key="frame" x="101" y="58" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-Ce-Uw2">
+                                                    <rect key="frame" x="101" y="29" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Org-ZY-ciG">
+                                                    <rect key="frame" x="101" y="8" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-zW-DdB" customClass="LikeButton" customModule="hurenapp" customModuleProvider="target">
+                                                    <rect key="frame" x="264" y="8" width="48" height="71"/>
+                                                    <color key="tintColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" image="Like-25"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityName" destination="wcJ-Ce-Uw2" id="ai6-sD-XGd"/>
+                                            <outlet property="favoriteButton" destination="QXz-zW-DdB" id="P2L-XJ-UcQ"/>
+                                            <outlet property="price" destination="YGr-re-mts" id="skc-B0-cOG"/>
+                                            <outlet property="streetName" destination="Org-ZY-ciG" id="7vG-S5-o3J"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="vhn-Md-AqW"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="b5D-WE-k1f"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qpo-4h-Ge1">
+                                <rect key="frame" x="191" y="72" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Lijst"/>
+                                    <segment title="Kaart"/>
+                                </segments>
+                                <color key="tintColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="gLg-7r-SbY"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lei-eX-oEq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Woningen" id="BXM-PM-TnY"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64P-QD-wWj">
+                                <rect key="frame" x="20" y="71" width="46" height="30"/>
+                                <color key="tintColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Filters"/>
+                                <connections>
+                                    <action selector="fitlersPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1p9-nT-1xo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="Huizen" image="Home-25" selectedImage="Home-25" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="eNQ-ST-qIw"/>
+                    <connections>
+                        <outlet property="NavTitle" destination="BXM-PM-TnY" id="afk-7u-uIq"/>
+                        <outlet property="navTitle" destination="BXM-PM-TnY" id="GOP-ZS-AhK"/>
+                        <outlet property="tableView" destination="TcV-3Y-oLI" id="olI-Mh-ipU"/>
+                        <segue destination="Zg5-km-XPw" kind="custom" identifier="CustomSegue" customClass="TableToDetailSeque" customModule="hurenapp" customModuleProvider="target" id="R6e-sf-O5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="747"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DWY-wn-mbl">
+            <objects>
+                <viewController id="Zg5-km-XPw" customClass="DetailViewController" customModule="hurenapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yzx-FZ-3Zu"/>
+                        <viewControllerLayoutGuide type="bottom" id="qNH-Ra-AC8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eMK-wo-pYA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" backIndicatorImage="back_btn" backIndicatorTransitionMaskImage="back_btn" translatesAutoresizingMaskIntoConstraints="NO" id="p6p-Dx-XDM">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="GZ5-8O-Neh">
+                                        <barButtonItem key="leftBarButtonItem" title="Terug" id="peI-cr-uSN">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="Zg5-km-XPw" id="zBe-t1-EJC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-Le-ptH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-Yd-fim">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="745"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AJ-zb-SG8">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Zg5-km-XPw" id="zOV-VB-CbE"/>
+                                                </connections>
+                                            </scrollView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-8I-kgI">
+                                                <rect key="frame" x="141" y="167" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </pageControl>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qxt-Dg-SGa">
+                                                <rect key="frame" x="0.0" y="228" width="320" height="189"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfd-6a-9kr">
+                                                <rect key="frame" x="196" y="662" width="116" height="30"/>
+                                                <state key="normal" title="Mail Makelaar">
+                                                    <color key="titleColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mailButtonPressed:" destination="Zg5-km-XPw" eventType="touchUpInside" id="3zS-cn-MSW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pb-2U-BWE">
+                                                <rect key="frame" x="8" y="662" width="109" height="30"/>
+                                                <state key="normal" title="Bel Makelaar">
+                                                    <color key="titleColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callButtonPressed:" destination="Zg5-km-XPw" eventType="touchUpInside" id="RYO-XO-1bZ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prijs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-cz-fIA">
+                                                <rect key="frame" x="8" y="425" width="109" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€ 100,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9W-0h-UXP">
+                                                <rect key="frame" x="80" y="425" width="100" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oppervlakte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpk-IR-43z">
+                                                <rect key="frame" x="8" y="454" width="109" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20m2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-HP-zz9">
+                                                <rect key="frame" x="80" y="454" width="100" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kamers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-aD-KQs">
+                                                <rect key="frame" x="8" y="483" width="109" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYf-Oi-Q49">
+                                                <rect key="frame" x="80" y="483" width="100" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;omschrijving&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M10-wv-8tW">
+                                                <rect key="frame" x="8" y="548" width="304" height="101"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Omschrijving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lS-lZ-mhE">
+                                                <rect key="frame" x="8" y="536" width="90" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bY1-Le-ptH" secondAttribute="trailing" constant="-20" id="Qpx-lt-KiO"/>
+                            <constraint firstItem="bY1-Le-ptH" firstAttribute="top" secondItem="p6p-Dx-XDM" secondAttribute="bottom" id="Y0C-hr-3g3"/>
+                            <constraint firstItem="bY1-Le-ptH" firstAttribute="leading" secondItem="eMK-wo-pYA" secondAttribute="leadingMargin" constant="-20" id="dz7-xm-e0f"/>
+                            <constraint firstItem="qNH-Ra-AC8" firstAttribute="top" secondItem="bY1-Le-ptH" secondAttribute="bottom" id="fyd-Xd-ePb"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="descLabel" destination="M10-wv-8tW" id="r4K-NM-XhJ"/>
+                        <outlet property="mainScroll" destination="bY1-Le-ptH" id="N7a-8g-fBW"/>
+                        <outlet property="mainView" destination="JDp-Yd-fim" id="iu9-ke-QmI"/>
+                        <outlet property="mapView" destination="Qxt-Dg-SGa" id="CLL-Ue-3yx"/>
+                        <outlet property="navBar" destination="p6p-Dx-XDM" id="AUI-en-KC5"/>
+                        <outlet property="navItem" destination="GZ5-8O-Neh" id="ZBO-Oj-ED5"/>
+                        <outlet property="oppervlakteLabel" destination="SAU-HP-zz9" id="L83-1a-y9m"/>
+                        <outlet property="pageControl" destination="mUZ-8I-kgI" id="HPC-Zv-4c9"/>
+                        <outlet property="priceLabel" destination="W9W-0h-UXP" id="zIY-Rv-HNr"/>
+                        <outlet property="roomLabel" destination="rYf-Oi-Q49" id="DbO-a9-qQq"/>
+                        <outlet property="scrollView" destination="9AJ-zb-SG8" id="iQP-yT-cpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygI-Ve-uth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="293"/>
+        </scene>
+        <!--Favorieten-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="FavorietenViewController" customModule="hurenapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-yb-kCP">
+                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="100" id="sBK-7K-mrd" customClass="WoningTableViewCell" customModule="hurenapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sBK-7K-mrd" id="Epb-YF-Q64">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzB-KG-nvx">
+                                                    <rect key="frame" x="101" y="58" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL9-rz-btN">
+                                                    <rect key="frame" x="101" y="29" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyy-jJ-U1I">
+                                                    <rect key="frame" x="101" y="8" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityName" destination="iL9-rz-btN" id="IhI-Bt-dMx"/>
+                                            <outlet property="price" destination="jzB-KG-nvx" id="1vw-0a-Rij"/>
+                                            <outlet property="streetName" destination="Hyy-jJ-U1I" id="Njn-ME-RYJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="6Iq-Op-bwj"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="ZUU-G0-Vy8"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjn-hw-Neb">
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Favorieten" id="JBV-kR-rL3"/>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b5n-Hb-awO">
+                                <rect key="frame" x="192" y="72" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Lijst"/>
+                                    <segment title="Kaart"/>
+                                </segments>
+                                <color key="tintColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChange:" destination="8rJ-Kc-sve" eventType="valueChanged" id="lVX-Vt-Jcl"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Favorieten" image="Star-25" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="navTitle" destination="JBV-kR-rL3" id="nVf-on-3nK"/>
+                        <outlet property="tableView" destination="6GN-yb-kCP" id="Qo1-sW-bbe"/>
+                        <segue destination="Zg5-km-XPw" kind="custom" identifier="CustomSeque" customClass="TableToDetailSeque" customModule="hurenapp" customModuleProvider="target" id="jOB-hn-PIl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="0.0"/>
+        </scene>
+        <!--Zoeken-->
+        <scene sceneID="pVN-4K-KNW">
+            <objects>
+                <viewController id="c5d-9j-oWi" customClass="ZoekViewController" customModule="hurenapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bt4-3G-OP8"/>
+                        <viewControllerLayoutGuide type="bottom" id="HPS-Lx-E0r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTB-VO-xYD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENy-7j-cgb">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Zoeken" id="Ch3-fq-Z1E"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plaats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-fq-YvV">
+                                <rect key="frame" x="135" y="198" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YY-w0-8z3">
+                                <rect key="frame" x="243" y="229" width="25" height="25"/>
+                                <state key="normal" title="Button" image="Near Me-25"/>
+                                <connections>
+                                    <action selector="locationButtonPressed:" destination="c5d-9j-oWi" eventType="touchUpInside" id="Ce7-4J-08z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqY-LH-F9o">
+                                <rect key="frame" x="82" y="227" width="157" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jr-5s-TRL">
+                                <rect key="frame" x="121" y="352" width="79" height="25"/>
+                                <state key="normal" title="Zoek">
+                                    <color key="titleColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="c5d-9j-oWi" eventType="touchUpInside" id="Pnd-Hi-pHS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2j8-Hr-ON7">
+                                <rect key="frame" x="94" y="265" width="133" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Uitgebreid zoeken">
+                                    <color key="titleColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="advancedButtonPressed:" destination="c5d-9j-oWi" eventType="touchUpInside" id="IYh-rU-pSe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Zoeken" image="Search-25" selectedImage="Search-25" id="Msp-GD-Nbj"/>
+                    <connections>
+                        <outlet property="searchField" destination="GqY-LH-F9o" id="ghw-q5-sHS"/>
+                        <segue destination="9pv-A4-QxB" kind="modal" identifier="CustomSegue" id="q7O-Yk-kLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8f0-6k-LwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="937"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="c5d-9j-oWi" kind="relationship" relationship="viewControllers" id="0cL-JH-acQ"/>
+                        <segue destination="Ecq-wb-co9" kind="relationship" relationship="viewControllers" id="GKr-CT-LiF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="T8h-JS-xTE">
+            <objects>
+                <viewController id="Ecq-wb-co9" customClass="FilterViewController" customModule="hurenapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kyY-jf-dDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmk-HK-I8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Mw-Gf-ilr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-dv-vzO">
+                                <rect key="frame" x="0.0" y="62" width="320" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="70" id="u5k-WP-zSr" customClass="FilterCell" customModule="hurenapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u5k-WP-zSr" id="W1z-tm-OU8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prijs van tot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCX-A4-jp4">
+                                                    <rect key="frame" x="22" y="8" width="121" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min opp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cni-v5-hzN">
+                                                    <rect key="frame" x="22" y="32" width="121" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="datum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-Bg-mHc">
+                                                    <rect key="frame" x="197" y="8" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plaats" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roX-Rv-FzE">
+                                                    <rect key="frame" x="197" y="32" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="bY4-Bg-mHc" id="sqB-aR-BwL"/>
+                                            <outlet property="oppLabel" destination="cni-v5-hzN" id="tSh-o7-uT1"/>
+                                            <outlet property="placeLabel" destination="roX-Rv-FzE" id="j05-xC-Ep4"/>
+                                            <outlet property="priceLabel" destination="NCX-A4-jp4" id="smY-9e-SwR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ecq-wb-co9" id="YZN-Ia-nk3"/>
+                                    <outlet property="delegate" destination="Ecq-wb-co9" id="Iln-2T-hie"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3c-j0-No7">
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Opgeslagen filters" id="eMk-e1-2zU"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Filters" image="Save-25" selectedImage="Save-25" id="HwQ-6K-An2"/>
+                    <connections>
+                        <outlet property="tableView" destination="caZ-dv-vzO" id="mP0-Qh-avS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-wL-d0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="-435"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home-25" width="25" height="25"/>
+        <image name="Like-25" width="25" height="25"/>
+        <image name="Near Me-25" width="25" height="25"/>
+        <image name="Save-25" width="25" height="25"/>
+        <image name="Search-25" width="25" height="25"/>
+        <image name="Star-25" width="25" height="25"/>
+        <image name="back_btn" width="36" height="40"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jOB-hn-PIl"/>
+        <segue reference="u7Y-xg-7CH"/>
+    </inferredMetricsTieBreakers>
+</document>

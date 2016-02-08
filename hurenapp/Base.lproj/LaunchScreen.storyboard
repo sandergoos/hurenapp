@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huren-icon@120.png" translatesAutoresizingMaskIntoConstraints="NO" id="q94-j4-K4O">
+                                <rect key="frame" x="180" y="123" width="240" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="qYG-3L-1hJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurenapp Tjuna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-uK-f1X">
+                                <rect key="frame" x="222" y="87" width="157" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BIL-dL-Kiz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 - Tjuna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymn-M4-KHA">
+                                <rect key="frame" x="223" y="376" width="156" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nmC-hu-E6t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0030870921056844361" green="0.81999999284744263" blue="0.039315990940404465" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.21202852" green="1" blue="0.1891264647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ymn-M4-KHA" secondAttribute="bottom" constant="203" id="2ut-Ag-0va"/>
+                            <constraint firstItem="ymn-M4-KHA" firstAttribute="top" secondItem="q94-j4-K4O" secondAttribute="bottom" constant="38" id="KoR-wH-h18"/>
+                            <constraint firstItem="ymn-M4-KHA" firstAttribute="trailing" secondItem="RLI-uK-f1X" secondAttribute="trailing" id="UlI-XT-noF"/>
+                            <constraint firstItem="q94-j4-K4O" firstAttribute="top" secondItem="RLI-uK-f1X" secondAttribute="bottom" constant="15" id="VUI-ru-2Yc"/>
+                            <constraint firstItem="RLI-uK-f1X" firstAttribute="centerX" secondItem="q94-j4-K4O" secondAttribute="centerX" id="YrD-yM-eex"/>
+                            <constraint firstItem="RLI-uK-f1X" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="67" id="cS2-ko-beV"/>
+                            <constraint firstItem="q94-j4-K4O" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cpg-55-DBk"/>
+                            <constraint firstItem="RLI-uK-f1X" firstAttribute="centerX" secondItem="ymn-M4-KHA" secondAttribute="centerX" id="sjb-Lm-gcw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="huren-icon@120.png" width="120" height="120"/>
+    </resources>
+</document>
